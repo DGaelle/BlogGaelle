@@ -8,19 +8,27 @@ namespace BlogGaelle.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Landing()
+        {
+            return View();
+        } 
+        public ActionResult Hobbies()
+        {
+            return View();
+        }
+        public ActionResult Competences()
         {
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Formation()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Parcours()
         {
             ViewBag.Message = "Your contact page.";
 
