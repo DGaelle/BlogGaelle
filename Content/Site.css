@@ -1,13 +1,17 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top : 70px;
     padding-bottom: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url('/images/fdecran.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Set padding to keep content from hitting the edges */
-.body-content {
+/*.body-content {
     padding-left: 15px;
     padding-right: 15px;
-}
+}*/
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -21,4 +25,17 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+#containerLanding{
+    display: inline;
+}
+img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+footer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    bottom: auto;
+    bottom: 0;
 }
