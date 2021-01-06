@@ -4,43 +4,44 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mon application ASP.NET</title>
+    <title>@ViewBag.Title - BlogGaelle</title>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/font-awesome/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body class="d-flex flex-column">
-        <div class="navbar navbar-transparent navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("Curriculum Vitae", "Landing", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav text-center">
+<body>
 
-                        <li>@Html.ActionLink("Compétences", "Competences", "Home")</li>
-                        <li>@Html.ActionLink("Formation", "Formation", "Home")</li>
-                        <li>@Html.ActionLink("Parcours", "Parcours", "Home")</li>
-                        <li>@Html.ActionLink("Hobbies", "Hobbies", "Home")</li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-dark bg-transparent navbar-expand-md pl-5">
+
+        <a id="brand" class="navbar-brand p-5" href="@Url.Action("Landing","Home")"><i class="far fa-user"></i> Gaëlle D. </a>
+
+
+        <div class="navbar-collapse collapse justify-content-center">
+            <ul class="nav navbar-nav">
+                <li>
+
+                    <a class="nav-item p-5" href="@Url.Action("Competences","Home")"><i class="fas fa-cogs" aria-hidden="true"></i> COMPETENCES </a>
+                    <a class="nav-item p-5" href="@Url.Action("Formation","Home")"><i class="fas fa-graduation-cap"></i> FORMATION </a>
+                    <a class="nav-item p-5" href="@Url.Action("Parcours","Home")"><i class="fas fa-briefcase"></i> PARCOURS </a>
+                    <a class="nav-item p-5" href="@Url.Action("Hobbies","Home")"><i class="fas fa-thumbs-up"></i> HOBBIES </a>
+
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+            <div class="container body-content m-auto">
+                @RenderBody()
             </div>
-        </div>
-        <div class="container body-content">
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - Curriculum Vitae </p>
-            </footer>
-        </div>
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Gaëlle D. </p>
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -8,6 +8,10 @@ namespace BlogGaelle.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult Construction()
+        {
+            return View();
+        }   
         public ActionResult Landing()
         {
             return View();
