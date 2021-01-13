@@ -6,7 +6,7 @@
     background-attachment: fixed;
     /* width: 2000px;*/
     color: goldenrod;
-    text-transform: uppercase;
+   
    
 }
 
@@ -19,11 +19,13 @@
 }
 #brand {
     color: coral;
+    text-transform: uppercase;
 }
 .nav-item {
     color: coral;
     font-weight: bold;
     font-size: large;
+    text-transform: uppercase;
 }
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -47,14 +49,23 @@ img {
     background-color: transparent;
     border-color: darkgoldenrod;
 }
-h2{
-    font-size: medium;
+h2 {
+    text-transform: uppercase;
+    font-size: larger;
     color: coral;
 }
+h1, h3 {
+    text-transform: uppercase;
+    font-size: x-large;
+}
+h5 {
+    text-transform: lowercase;
+}
+
 footer {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: coral;
-    position:  sticky;
+    position: sticky;
     bottom: 0;
     padding-left: 20px;
     font-weight: bold;
