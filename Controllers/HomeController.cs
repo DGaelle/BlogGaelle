@@ -11,32 +11,48 @@ namespace BlogGaelle.Controllers
         public ActionResult Construction()
         {
             return View();
-        }   
+        }
+        // GET: Home/Landing/1
         public ActionResult Landing()
         {
             return View();
-        } 
-        public ActionResult Hobbies()
-        {
-            return View();
         }
-        public ActionResult Competences()
+        // POST: Home/Landing/1
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(([Bind(Include = "IdUser,Nom,Prenom,Email,Telephone")] User user))
         {
-            return View();
-        }
-
-        public ActionResult Formation()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Parcours()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+            if (ModelState.IsValid)
+            {
+                db.Entry(utilisateur).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Compte");
     }
-}
+    }
+            return View(utilisateur);
+
+
+} 
+
+        //public ActionResult Hobbies()
+        //{
+        //    return View();
+        //}
+        //public ActionResult Competences()
+        //{
+        //    return View();
+        //}
+
+        //public ActionResult Formation()
+        //{
+        //    ViewBag.Message = "Your application description page.";
+
+        //    return View();
+        //}
+
+        //public ActionResult Parcours()
+        //{
+        //    ViewBag.Message = "Your contact page.";
+
+        //    return View();
+        //}

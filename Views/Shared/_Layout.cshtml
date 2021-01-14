@@ -25,8 +25,8 @@
                     <a class="nav-item p-5" href="#cardFormation"><i class="fas fa-briefcase"></i> FORMATION </a>
                     <a class="nav-item p-5" href="#cardHobbies"><i class="fas fa-thumbs-up"></i> HOBBIES </a>
                     @*<a class="nav-item p-5" href="@Url.Action("Formation","Home")"><i class="fas fa-graduation-cap"></i> FORMATION </a>
-                    <a class="nav-item p-5" href="@Url.Action("Parcours","Home")"><i class="fas fa-briefcase"></i> PARCOURS </a>
-                    <a class="nav-item p-5" href="@Url.Action("Hobbies","Home")"><i class="fas fa-thumbs-up"></i> HOBBIES </a>*@
+                        <a class="nav-item p-5" href="@Url.Action("Parcours","Home")"><i class="fas fa-briefcase"></i> PARCOURS </a>
+                        <a class="nav-item p-5" href="@Url.Action("Hobbies","Home")"><i class="fas fa-thumbs-up"></i> HOBBIES </a>*@
 
                 </li>
             </ul>
@@ -34,17 +34,18 @@
         </div>
     </nav>
 
-            <div class="container body-content m-auto">
-                @RenderBody()
-            </div>
+    <div class="container body-content m-auto">
+        @RenderBody()
+    </div>
 
     <footer>
-        <p>&copy; @DateTime.Now.Year - Gaëlle D. </p>
+        <div data-layout="activity-description-rating-tags" class="codeur-profile-widget"><a id="but" href="https://www.codeur.com/users/445333/widget">Infos Prestations</a></div>
+        <p>&copy; @DateTime.Now.Year - Site conçu par G.DUCROCQ en ASP.NET MVC </p>
     </footer>
-
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
+
 </html>
