@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MySql.Data.MySqlClient;
+using BlogGaelle.Repository;
 
+//librairie MySql ajoutée précédemment dans les ref
 namespace BlogGaelle.Controllers
 {
     public class HomeController : Controller
@@ -17,22 +20,13 @@ namespace BlogGaelle.Controllers
         {
             return View();
         }
-        // POST: Home/Landing/1
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(([Bind(Include = "IdUser,Nom,Prenom,Email,Telephone")] User user))
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(utilisateur).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Compte");
+        
     }
-    }
-            return View(utilisateur);
+}
+            //return View(utilisateur);
 
 
-} 
+
 
         //public ActionResult Hobbies()
         //{
