@@ -1,6 +1,6 @@
-﻿@model BlogGaelle.Models.User
+﻿
 @{
-    ViewBag.Title = "Landing";
+
 }
 
 <div class="d-flex flex-column col-12">
@@ -225,79 +225,17 @@
             </div>
         </div>
     </div>
-    <div id="cardContact" class="card bg-card align-items-center">
+    @*<div id="cardContact" class="card bg-card align-items-center">
         <div class="p-3 text-center">
             <h1>CONTACT</h1>
             <div class="ml-5 mt-5 mb-5 text-uppercase text-center">
-
+                <p> Pour toute demande ou message, il vous suffit de remplir ce formulaire.</p>
 
             </div>
             <section>
-
-                @using (Html.BeginForm())
-                {
-                    @Html.AntiForgeryToken()
-
-                <div class="form-horizontal">
-
-                    <hr />
-                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                    @Html.HiddenFor(model => model.Id)
-
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Nom, htmlAttributes: new { @class = "control-label col-md-6" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.Nom, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.Nom, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Prenom, htmlAttributes: new { @class = "control-label col-md-6" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.Prenom, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.Prenom, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-6" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Telephone, htmlAttributes: new { @class = "control-label col-md-6" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.Telephone, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.Telephone, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="form-group">
-                            <div class="col-md-offset-2 col-md-10">
-                                <input type="submit" value="Valider" class="btn btn-outline-success" />
-                            </div>
-                        </div>
-                        <div>
-                            @Html.ActionLink("Back to Top", "Landing", null, new { @class = "btn btn-outline-danger" })
-                        </div>
-                    </div>
-                </div>
-                }
+                @Html.Partial("Create")
 
             </section>
         </div>
-    </div>
+    </div>*@
 </div>
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
-
-@*<input type="button" id="scrolltop" value="Haut" Onclick="window.location.href=" href="#intro">*@
-
-
-
